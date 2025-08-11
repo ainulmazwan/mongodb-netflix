@@ -30,13 +30,31 @@ const movieSchema = new mongoose.Schema({
 
 // declare schema for tvshows
 const tvShowSchema = new mongoose.Schema({
-  title: String,
-  creator: String,
-  premiere_year: Number,
+  title: {
+    type: String,
+    required: true,
+  },
+  creator: {
+    type: String,
+    required: true,
+  },
+  premiere_year: {
+    type: Number,
+    required: true,
+  },
   end_year: Number,
-  seasons: Number,
-  genre: String,
-  rating: Number,
+  seasons: {
+    type: Number,
+    required: true,
+  },
+  genre: {
+    type: String,
+    required: true,
+  },
+  rating: {
+    type: Number,
+    required: true,
+  },
 });
 
 // create a Modal from the schema
