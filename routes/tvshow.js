@@ -113,7 +113,7 @@ router.delete("/:id", async (req, res) => {
     await deleteTvShow(id);
 
     res.status(200).send({
-      message: `Movie with the ID of ${id} has been deleted`,
+      message: `Tv show with the ID of ${id} has been deleted`,
     });
   } catch (error) {
     res.status(400).send({ message: "Unknown error" });
